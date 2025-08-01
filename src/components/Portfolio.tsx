@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaExternalLinkAlt, FaArrowRight, FaImages, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowRight, FaImages, FaFileAlt } from 'react-icons/fa';
 import './Portfolio.css';
 
 const Portfolio = () => {

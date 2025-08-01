@@ -3,7 +3,6 @@ import './Background.css';
 
 // Import media files
 import fastLinesVideo from './Images/vecteezy_fast-lines-background_2018433.mp4';
-import twistedVideo from './Images/vecteezy_twisted-white-black-gradient-liquid-motion-blur-abstract_24344727.mp4';
 import kul52Image from './Images/v882-kul-52.jpg';
 import kul55Image from './Images/v882-kul-55.jpg';
 import kul57Image from './Images/v882-kul-57.jpg';
