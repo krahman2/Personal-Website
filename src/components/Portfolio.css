@@ -1,0 +1,230 @@
+.portfolio {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.portfolio-intro {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.featured-portfolio {
+  margin-bottom: 2rem;
+}
+
+.featured-portfolio h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.other-portfolio h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-card.featured {
+  border: 2px solid var(--accent);
+}
+
+.portfolio-content {
+  padding: 1.25rem;
+}
+
+.portfolio-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.portfolio-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.portfolio-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
+
+.portfolio-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.portfolio-link svg {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover svg {
+  transform: translateX(3px);
+}
+
+.portfolio-arrow {
+  color: var(--accent);
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.portfolio-card.github {
+  border-left: 4px solid #333;
+}
+
+.portfolio-card.linkedin {
+  border-left: 4px solid #0077b5;
+}
+
+.portfolio-card.resume {
+  border-left: 4px solid #e74c3c;
+}
+
+.portfolio-card.blog {
+  border-left: 4px solid #f39c12;
+}
+
+.portfolio-card.video {
+  border-left: 4px solid #e74c3c;
+}
+
+.portfolio-card.projects {
+  border-left: 4px solid #2ecc71;
+}
+
+.contact-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 2rem 0;
+  }
+
+  .featured-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portfolio-card {
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-content {
+    padding: 1rem;
+  }
+
+  .portfolio-content h3 {
+    font-size: 1rem;
+  }
+
+  .portfolio-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 1.5rem 0;
+  }
+
+  .portfolio-intro {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-portfolio h2,
+  .other-portfolio h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-content {
+    padding: 0.75rem;
+  }
+
+  .portfolio-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+} 

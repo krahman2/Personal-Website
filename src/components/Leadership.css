@@ -1,0 +1,160 @@
+.leadership {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.leadership-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.leadership-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.leadership-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  margin-bottom: 1.5rem;
+}
+
+.leadership-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px var(--shadow);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.leadership-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.role-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.leadership-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.leadership-info h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.role-meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.role-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.role-meta svg {
+  color: var(--accent);
+}
+
+.role-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.achievements h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '•';
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leadership {
+    padding: 2rem 0;
+  }
+
+  .leadership-card {
+    padding: 1.25rem;
+  }
+
+  .leadership-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .role-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership {
+    padding: 1.5rem 0;
+  }
+
+  .leadership-card {
+    padding: 1rem;
+  }
+
+  .leadership-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .role-description {
+    font-size: 0.8rem;
+  }
+
+  .achievements li {
+    font-size: 0.8rem;
+  }
+} 
