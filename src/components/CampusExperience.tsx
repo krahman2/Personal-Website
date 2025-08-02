@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaTrophy, FaCalendarAlt } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 import './CampusExperience.css';
 
 const CampusExperience = () => {

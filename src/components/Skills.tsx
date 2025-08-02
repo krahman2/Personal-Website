@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaCode, FaBrain, FaTools, FaProjectDiagram, FaPalette, FaChartBar, FaCertificate } from 'react-icons/fa';
+import { FaCode, FaBrain, FaTools, FaProjectDiagram, FaChartBar, FaCertificate } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = () => {

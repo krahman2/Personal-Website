@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaMapMarkerAlt, FaHeart, FaCode, FaBook, FaMusic, FaGlobe, FaChartLine, FaCogs } from 'react-icons/fa';
+import { FaGraduationCap, FaMapMarkerAlt, FaCode, FaGlobe, FaChartLine, FaCogs } from 'react-icons/fa';
 import aboutImage from './Images/PXL_20241222_002245799.jpg';
 import './About.css';
 
