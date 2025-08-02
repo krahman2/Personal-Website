@@ -1,21 +1,9 @@
 import { motion } from 'framer-motion';
-import { FaUsers, FaTrophy, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUsers, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import './Leadership.css';
 
 const Leadership = () => {
   const leadershipRoles = [
-    {
-      title: "Vice President",
-      organization: "IEEE @ SFSU",
-      location: "San Francisco State University",
-      duration: "May 2022 - May 2024",
-      description: "Led the IEEE student chapter, hosting industry events and rebuilding an inactive organization into a thriving community.",
-      achievements: [
-        "Hosted 10+ industry events (Intel, FBI, etc.)",
-        "Rebuilt inactive chapter, recruited 20+ members, managed finance",
-        "Organized technical workshops and networking events"
-      ]
-    },
     {
       title: "Founder & President",
       organization: "Bangladeshi Students Association (BSA)",
@@ -24,8 +12,24 @@ const Leadership = () => {
       description: "Founded the organization from scratch to create a community for Bangladeshi and international students.",
       achievements: [
         "Founded organization from scratch",
+        "Created a welcoming cultural space for Bangladeshi students",
+        "Organized language nights, festivals, and community workshops",
         "Hosted DEI events with 200+ attendees",
         "Created community for Bangladeshi and international students"
+      ]
+    },
+    {
+      title: "Vice President",
+      organization: "IEEE @ SFSU",
+      location: "San Francisco State University",
+      duration: "May 2022 - May 2024",
+      description: "Led the IEEE student chapter, hosting industry events and rebuilding an inactive organization into a thriving community.",
+      achievements: [
+        "Grew member engagement by 3x through technical and networking events",
+        "Built cross-campus partnerships with tech companies and alumni",
+        "Hosted 10+ industry events (Intel, FBI, etc.)",
+        "Rebuilt inactive chapter, recruited 20+ members, managed finance",
+        "Organized technical workshops and networking events"
       ]
     },
     {
@@ -96,7 +100,6 @@ const Leadership = () => {
                 <ul>
                   {role.achievements.map((achievement, idx) => (
                     <li key={idx}>
-                      <FaTrophy className="achievement-icon" />
                       {achievement}
                     </li>
                   ))}

@@ -5,29 +5,33 @@ import './Education.css';
 const Education = () => {
   const education = [
     {
+      degree: "Master of Science in Statistical Data Science",
+      specialization: "Statistical Analysis & Data Mining",
+      school: "San Francisco State University",
+      location: "San Francisco, CA",
+      duration: "Aug 2025 - Aug 2027 (Expected)",
+      gpa: "In Progress",
+      description: "Focusing on advanced statistical methods, data mining, and machine learning applications. Emphasis on probability theory and statistical learning. Selected as Graduate Teaching Assistant.",
+      academicEvents: [
+        "Starting program in August 2025",
+        "Planning research in statistical applications to AI"
+      ]
+    },
+    {
       degree: "Bachelor of Science in Electrical Engineering",
       specialization: "Machine Learning & Signal Processing",
       school: "San Francisco State University",
       location: "San Francisco, CA",
       duration: "2021 - 2024",
       gpa: "3.59/4.0",
-      honors: "Graduated Cum Laude",
+      honors: "Graduated Cum Laude, Dean's List, IEEE Scholar",
       description: "Focused on machine learning, embedded systems, and signal processing. Completed coursework in hardware for ML, digital signal processing, and control systems.",
       achievements: [
         "Dean's List (4 consecutive semesters)",
+        "IEEE Scholar",
         "Gator's Leadership Circle Honoree",
         "IEEE SFSU Vice President",
         "Engineering Student Advisory Board Secretary"
-      ],
-      courses: [
-        "Hardware for Machine Learning",
-        "Digital Signal Processing",
-        "Signals & Systems",
-        "Power Systems & Protection",
-        "Communication Systems",
-        "Microprocessor System Design",
-        "Control Systems",
-        "Data Structures & Algorithms in C/C++"
       ],
       academicEvents: [
         "Presenter at SFSU Engineering Showcase (Senior Capstone)",
@@ -49,12 +53,6 @@ const Education = () => {
         "3D Printing Club Coordinator",
         "Student Ambassador for the Engineering Faculty"
       ],
-      courses: [
-        "Electrical Engineering Fundamentals",
-        "Supply Chain Management",
-        "3D Printing & Rapid Prototyping",
-        "PCB Design & Robotics Integration"
-      ],
       academicEvents: [
         "Hosted Taylor's InnoFest (multi-department project expo)",
         "Organized inter-campus design challenges and hackathons",
@@ -63,61 +61,66 @@ const Education = () => {
     }
   ];
 
-  const certifications = [
+  const courseCategories = [
     {
-      name: "Google Project Management Fundamentals",
-      issuer: "Google / Coursera",
-      year: "2023"
+      title: "Mathematics",
+      courses: [
+        "Calculus I",
+        "Calculus II",
+        "Calculus III",
+        "Differential Equations",
+        "Linear Algebra",
+        "Probability and Statistics I",
+        "Probability and Statistics II"
+      ]
     },
     {
-      name: "Agile Project Management with Jira",
-      issuer: "LinkedIn Learning",
-      year: "2023"
+      title: "Machine Learning",
+      courses: [
+        "Statistical Learning and Data Mining",
+        "Introduction to Time Series Analysis",
+        "Design and Analysis of Experiments",
+        "Introduction to Linear Models",
+        "Hardware for Machine Learning"
+      ]
     },
     {
-      name: "Agile Software Development",
-      issuer: "LinkedIn Learning",
-      year: "2023"
+      title: "Electrical Engineering Core",
+      courses: [
+        "Linear Systems Analysis",
+        "Operational Amplifiers",
+        "Electromechanical Systems",
+        "Power Systems",
+        "Semiconductor Materials",
+        "Communication Systems",
+        "Control Systems",
+        "Digital Signal Processing"
+      ]
     },
     {
-      name: "Azure DevOps Fundamentals",
-      issuer: "LinkedIn Learning",
-      year: "2023"
+      title: "Programming & Computing",
+      courses: [
+        "Introduction to C Programming for Engineers",
+        "Programming Techniques",
+        "Computing Applications for Engineers"
+      ]
     },
     {
-      name: "Excel for Data Analytics",
-      issuer: "LinkedIn Learning",
-      year: "2023"
+      title: "Engineering Design & Projects",
+      courses: [
+        "Engineering Experimentation",
+        "Engineering Design and Analysis",
+        "Engineering Project Management"
+      ]
     },
     {
-      name: "Simulink OnRamp",
-      issuer: "MATLAB (MathWorks)",
-      year: "2023"
-    },
-    {
-      name: "Control Design with MATLAB",
-      issuer: "MATLAB (MathWorks)",
-      year: "2023"
-    },
-    {
-      name: "MATLAB Fundamentals",
-      issuer: "MATLAB (MathWorks)",
-      year: "2023"
-    },
-    {
-      name: "Python 3: Zero to Hero",
-      issuer: "Udemy",
-      year: "2023"
-    },
-    {
-      name: "Python for Data Science Essentials",
-      issuer: "Udemy",
-      year: "2023"
-    },
-    {
-      name: "CPR & First Aid",
-      issuer: "ORC (Outdoor Resource Center)",
-      year: "2023"
+      title: "Electronics & Circuits",
+      courses: [
+        "Digital and Analogue Electronics",
+        "Circuits and Devices",
+        "Electromagnetic Fields and Waves",
+        "Signals and Systems"
+      ]
     }
   ];
 
@@ -130,7 +133,7 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="section-title"
         >
-          Education & Certifications
+          Education
         </motion.h1>
 
         <div className="education-timeline">
@@ -161,26 +164,16 @@ const Education = () => {
                 <div className="education-details">
                   <p className="description">{edu.description}</p>
                   
-                  <div className="achievements-section">
-                    <h5><FaAward /> Honors & Awards</h5>
-                    <ul>
-                      {edu.achievements.map((achievement, idx) => (
-                        <li key={idx}>{achievement}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="courses-section">
-                    <h5><FaBook /> Key Courses</h5>
-                    <div className="courses-grid">
-                      {edu.courses.slice(0, 6).map((course, idx) => (
-                        <span key={idx} className="course-tag">{course}</span>
-                      ))}
-                      {edu.courses.length > 6 && (
-                        <span className="course-tag">+{edu.courses.length - 6} more</span>
-                      )}
+                  {edu.achievements && edu.achievements.length > 0 && (
+                    <div className="achievements-section">
+                      <h5><FaAward /> Honors & Awards</h5>
+                      <ul>
+                        {edu.achievements.map((achievement, idx) => (
+                          <li key={idx}>{achievement}</li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -191,21 +184,30 @@ const Education = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="certifications-section"
+          className="courses-section"
         >
-          <h2>Certifications</h2>
-          <div className="certifications-grid">
-            {certifications.map((cert, index) => (
+          <div className="category-header">
+            <div className="category-icon">
+              <FaBook />
+            </div>
+            <h3>Coursework</h3>
+          </div>
+          
+          <div className="course-categories-grid">
+            {courseCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 1 + index * 0.05 }}
-                className="certification-card"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
+                className="course-category"
               >
-                <h4>{cert.name}</h4>
-                <p className="issuer">{cert.issuer}</p>
-                <p className="year">{cert.year}</p>
+                <h4 className="category-title">{category.title}</h4>
+                <div className="courses-list">
+                  {category.courses.map((course, idx) => (
+                    <span key={idx} className="course-tag">{course}</span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>

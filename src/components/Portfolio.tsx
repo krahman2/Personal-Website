@@ -21,6 +21,22 @@ const Portfolio = () => {
       featured: true
     },
     {
+      title: "AMAVA Research Paper",
+      description: "First publication: 'Semantically consistent Video-to-Audio Generation using Multimodal Language Large Model'. Novel framework for generating audio semantically consistent with video content.",
+      icon: <FaFileAlt />,
+      link: "#",
+      type: "publication",
+      featured: true
+    },
+    {
+      title: "Diff-Foley Research",
+      description: "State-of-the-art Video-to-Audio synthesis using latent diffusion models with contrastive audio-visual pretraining. Currently working on replication and improvements.",
+      icon: <FaFileAlt />,
+      link: "#",
+      type: "research",
+      featured: true
+    },
+    {
       title: "ENGR492 Projects",
       description: "Senior design project repository featuring DC motor control, Mars audio filtering, power flow analysis, and QPSK communication systems.",
       icon: <FaGithub />,

@@ -5,38 +5,72 @@ import './CampusExperience.css';
 const CampusExperience = () => {
   const experiences = [
     {
-      title: "MESA Conference",
-      role: "Presenter",
-      duration: "2023 - 2024",
-      description: "Presented engineering projects and research findings at the MESA (Mathematics, Engineering, Science Achievement) Conference.",
+      title: "Office & Human Resources Assistant",
+      role: "Mashouf Wellness Center",
+      duration: "May 2022 - Aug 2024",
+      description: "Provided administrative support and human resources assistance for the university wellness center.",
       activities: [
-        "Presented technical projects to industry professionals",
-        "Networked with engineering leaders and peers",
-        "Received feedback on research methodologies"
+        "Managed administrative tasks and student inquiries",
+        "Assisted with HR processes and documentation",
+        "Supported wellness center operations and student services"
       ]
     },
     {
-      title: "Engineering Showcase",
-      role: "Coordinator",
-      duration: "2021 - 2024",
-      description: "Coordinated the annual Engineering Showcase featuring 20+ senior projects and research presentations.",
+      title: "Staff Member",
+      role: "Outdoor Resource Center (ORC)",
+      duration: "Jan 2022 - May 2023",
+      description: "Managed outdoor equipment rentals and provided support for recreational activities.",
       activities: [
-        "Coordinated 20+ senior projects and presentations",
-        "Managed event logistics and technical requirements",
-        "Facilitated industry connections and feedback"
+        "Managed equipment inventory and rental processes",
+        "Provided customer service for outdoor recreation activities",
+        "Maintained safety protocols and equipment standards"
       ]
     },
     {
-      title: "Gator's Leadership Circle",
-      role: "Member",
-      duration: "2022 - 2024",
-      description: "Participated in leadership development program focused on community building and professional growth.",
+      title: "Peer Mentor",
+      role: "Student Success Programs (First Year Experience)",
+      duration: "Aug 2022 - May 2023",
+      description: "Mentored first-year students to support their academic transition and success.",
       activities: [
-        "Developed leadership skills through workshops",
-        "Collaborated on campus improvement initiatives",
-        "Mentored incoming student leaders"
+        "Provided academic guidance and support to first-year students",
+        "Facilitated orientation and transition programs",
+        "Helped students navigate university resources and services"
       ]
-    }
+    },
+    {
+      title: "Coordinator",
+      role: "Engineering Showcase",
+      duration: "Dec 2021 - May 2023",
+      description: "Coordinated the annual Engineering Showcase event featuring student projects and research.",
+      activities: [
+        "Coordinated Engineering Showcase with 20+ senior projects",
+        "Managed event logistics and student presentations",
+        "Facilitated industry connections and networking opportunities"
+      ]
+    },
+    {
+      title: "Outreach Coordinator",
+      role: "Estuary & Ocean Science Center",
+      duration: "Dec 2021 - Jun 2022",
+      description: "Organized outreach events and educational programs for K-12 students and community engagement.",
+      activities: [
+        "Organized outreach events for K-12 students",
+        "Partnered with scientists and Bay Area schools",
+        "Developed educational programs and retention tracking"
+      ]
+    },
+    {
+      title: "Presenter",
+      role: "MESA Conference",
+      duration: "Dec 2021 - Jun 2022",
+      description: "Presented research and projects at the MESA STEM Conference.",
+      activities: [
+        "Presented technical projects and research findings",
+        "Represented university at STEM conference",
+        "Networked with industry professionals and researchers"
+      ]
+    },
+
   ];
 
   return (
@@ -68,17 +102,16 @@ const CampusExperience = () => {
               
               <p className="campus-description">{exp.description}</p>
               
-              <div className="activities">
-                <h4>Key Activities</h4>
-                <ul>
-                  {exp.activities.map((activity, idx) => (
-                    <li key={idx}>
-                      <FaTrophy className="activity-icon" />
-                      {activity}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                             <div className="activities">
+                 <h4>Key Activities</h4>
+                 <ul>
+                   {exp.activities.map((activity, idx) => (
+                     <li key={idx}>
+                       {activity}
+                     </li>
+                   ))}
+                 </ul>
+               </div>
             </motion.div>
           ))}
         </div>

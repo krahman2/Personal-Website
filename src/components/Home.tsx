@@ -38,7 +38,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="hero-subtitle"
             >
-              AI Researcher | Electrical Engineer | Project Manager
+              Graduate Research Assistant, Electrical Engineer Graduate, Educator
             </motion.h2>
             
             <motion.p
@@ -47,9 +47,12 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="hero-description"
             >
-              Electrical Engineer and AI Researcher with 4+ years of cross-disciplinary experience across machine learning, 
-              project management, outreach, and embedded systems. Currently researching multimodal deep learning models 
-              at AI-LAMP in San Francisco.
+              Graduate AI Research Assistant at the Artificial Intelligence Laboratory of Augmented Multimodal Perception (AI-LAMP) 
+              with 1+ year of experience in multimodal deep learning and video-to-audio synthesis. 
+              Currently pursuing my Master's in Statistical Data Science while being a Teaching Assistant for Calculus II, Grader for AI in Engineering, 
+              and K-8 mathematics at Descartes Learning Club. 
+              Graduated with a B.S. in Electrical Engineering with specialization in Machine Learning. 
+              Former IT Project Management Intern at Fortune20 company.
             </motion.p>
 
             <motion.div
@@ -121,96 +124,44 @@ const Home = () => {
             What I Do
           </motion.h2>
 
-          <div className="overview-grid">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="overview-card"
-            >
-              <div className="card-icon">🤖</div>
-              <h3>AI Research</h3>
-              <p>Researching multimodal deep learning models and Visual-to-Audio synthesis at AI-LAMP.</p>
-            </motion.div>
+                                           <div className="overview-grid">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="overview-card"
+              >
+                <h3>Video 2 Audio Generation Research</h3>
+                <p>Researching multimodal deep learning models and Visual-to-Audio synthesis at AI-LAMP.</p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="overview-card"
-            >
-              <div className="card-icon">⚡</div>
-              <h3>Electrical Engineering</h3>
-              <p>Specialized in machine learning with expertise in embedded systems and signal processing.</p>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="overview-card"
+              >
+                <h3>Outreach and Education Work</h3>
+                <p>Teaching Calculus at SF State and K-8 mathematics, fostering learning and community engagement.</p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="overview-card"
-            >
-              <div className="card-icon">📊</div>
-              <h3>Project Management</h3>
-              <p>Led Agile ceremonies and optimized processes using Azure, JIRA, and data analytics.</p>
-            </motion.div>
-          </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="overview-card"
+              >
+                <h3>Project and Product Management</h3>
+                <p>Led Agile ceremonies and optimized processes using Azure, JIRA, and data analytics.</p>
+              </motion.div>
+            </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="stats">
-        <div className="container">
-          <div className="stats-grid">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="stat-item"
-            >
-              <h3>8+</h3>
-              <p>Projects Completed</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="stat-item"
-            >
-              <h3>4+</h3>
-              <p>Years Experience</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="stat-item"
-            >
-              <h3>15+</h3>
-              <p>Technologies</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="stat-item"
-            >
-              <h3>3.59</h3>
-              <p>GPA</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

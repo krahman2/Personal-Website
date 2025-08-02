@@ -5,24 +5,67 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: "Research Assistant",
+      title: "Graduate AI Research Assistant",
       company: "AI-LAMP (SFSU)",
       location: "San Francisco, CA",
       duration: "Jul 2024 - Present",
-      description: "Researching diffusion models and Visual-to-Audio (V2A) synthesis for multimodal deep learning applications.",
+      description: "Researching diffusion models and Visual-to-Audio (V2A) synthesis for multimodal deep learning applications. Currently working on AMAVA project and diffusion foley replication.",
       achievements: [
         "Researched diffusion models and V2A (Visual-to-Audio) synthesis",
         "Worked on AudioGen, MusicGen, CLIP, FFMPEG for multimodal synthesis",
         "Implemented filtering using FFT and noise reduction in generation pipeline"
       ],
-      technologies: ["Python", "AudioGen", "MusicGen", "CLIP", "FFMPEG", "FFT"]
+      technologies: ["Python", "AudioGen", "MusicGen", "CLIP", "FFMPEG", "FFT", "Diffusion Models", "AMAVA", "Diff-Foley"]
+    },
+    {
+      title: "Graduate Teaching Assistant",
+      company: "San Francisco State University",
+      location: "San Francisco, CA",
+      duration: "Aug 2024 - Present",
+      description: "Teaching Calculus 2 and Calculus Seminar courses, providing academic support and guidance to undergraduate students in mathematics.",
+      achievements: [
+        "Teaching Calculus 2 (Calculus II) to undergraduate students",
+        "Leading Calculus Seminar sessions for advanced mathematical concepts",
+        "Providing one-on-one tutoring and office hours support",
+        "Grading assignments and providing constructive feedback",
+        "Supporting students in developing strong mathematical foundations"
+      ],
+      technologies: ["Calculus", "Mathematics Education", "Student Mentoring", "Academic Support", "Course Management"]
+    },
+    {
+      title: "TA and Grader",
+      company: "San Francisco State University - ENGR 413",
+      location: "San Francisco, CA",
+      duration: "Aug 2024 - Present",
+      description: "Teaching Assistant and Grader for ENGR 413: AI in Engineering course, covering fundamental AI concepts, machine learning, neural networks, and practical engineering applications.",
+      achievements: [
+        "Grading assignments and providing feedback for AI engineering projects",
+        "Supporting students in machine learning, neural networks, and computer vision",
+        "Assisting with hands-on projects and real-world case studies",
+        "Contributing to course development and student learning outcomes"
+      ],
+      technologies: ["AI Engineering", "Machine Learning", "Neural Networks", "Computer Vision", "Student Assessment"]
+    },
+    {
+      title: "Math Educator",
+      company: "Descartes Learning Club",
+      location: "San Francisco, CA",
+      duration: "Jun 2024 - Present",
+      description: "Teaching personalized mathematics to K-8 students, fostering problem-solving minds and inspiring lifelong love for learning through world-class math education.",
+      achievements: [
+        "Teaching personalized mathematics to K-8 students",
+        "Developing problem-solving minds and mathematical thinking",
+        "Creating tailored learning experiences for each student's unique needs",
+        "Fostering investigation and curiosity in mathematical concepts"
+      ],
+      technologies: ["Mathematics Education", "Personalized Learning", "Problem-Solving", "K-8 Curriculum", "Student Assessment"]
     },
     {
       title: "IT Project Management Intern",
-      company: "Cencora (AmerisourceBergen)",
+      company: "Cencora (AmerisourceBergen) - Fortune 20 Pharmaceutical Supply Chain",
       location: "Remote",
       duration: "May 2023 - Aug 2023",
-      description: "Led Agile ceremonies and optimized processes using Azure, JIRA, and data analytics for pharmaceutical distribution.",
+      description: "Led Agile ceremonies and optimized processes using Azure, JIRA, and data analytics for pharmaceutical distribution. Supported execution of $100M+ infrastructure and automation projects in the Engineering, Design & Automation (ED&A) Division.",
       achievements: [
         "Led Agile ceremonies (sprint planning, PI planning, retrospectives)",
         "Automated tracking of 200+ test cases via Power Automate",
@@ -45,44 +88,8 @@ const Experience = () => {
       ],
       technologies: ["Program Design", "Analytics", "Video Production", "Community Outreach"]
     },
-    {
-      title: "Outreach Coordinator",
-      company: "Estuary & Ocean Science Center",
-      location: "San Francisco, CA",
-      duration: "Dec 2021 - Jun 2022",
-      description: "Organized outreach events for K-12 students and partnered with scientists and Bay Area schools.",
-      achievements: [
-        "Organized outreach events for 500+ K-12 students",
-        "Partnered with 20+ scientists and 15 Bay Area schools",
-        "Developed evaluation models and retention tracking (achieved 15% retention)"
-      ],
-      technologies: ["Event Planning", "Partnership Development", "Data Analysis", "Education"]
-    },
-    {
-      title: "Staff Member",
-      company: "Outdoor Resource Center (SFSU)",
-      location: "San Francisco, CA",
-      duration: "Jan 2022 - Present",
-      description: "Managed logistics, inventory, and equipment checkout for outdoor gear and recreational activities.",
-      achievements: [
-        "Managed logistics, inventory, and equipment checkout for outdoor gear",
-        "Trained new recruits, handled reporting, and enforced ORC protocols"
-      ],
-      technologies: ["Inventory Management", "Training", "Logistics", "Safety Protocols"]
-    },
-    {
-      title: "Supply Chain Intern",
-      company: "Seasoned Syndicate Auto Parts (BD)",
-      location: "Bangladesh",
-      duration: "Dec 2020 - Mar 2021",
-      description: "Optimized supply chain operations using Lean Six Sigma methodologies for automotive parts distribution.",
-      achievements: [
-        "Switched sourcing from India to China to reduce costs",
-        "Reduced delivery time by 10% using Lean Six Sigma",
-        "Led logistics for national distribution, overseeing 8–20 team members"
-      ],
-      technologies: ["Lean Six Sigma", "Supply Chain Management", "Logistics", "Team Leadership"]
-    }
+
+
   ];
 
   return (
@@ -147,32 +154,7 @@ const Experience = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="skills-summary"
-        >
-          <h2>Professional Skills</h2>
-          <div className="skills-grid">
-            <div className="skill-category">
-              <h3>Frontend Development</h3>
-              <p>React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap</p>
-            </div>
-            <div className="skill-category">
-              <h3>Backend Development</h3>
-              <p>Node.js, Python, Express.js, Django, REST APIs, GraphQL</p>
-            </div>
-            <div className="skill-category">
-              <h3>Database & Cloud</h3>
-              <p>PostgreSQL, MongoDB, AWS, Docker, Kubernetes, CI/CD</p>
-            </div>
-            <div className="skill-category">
-              <h3>Tools & Methodologies</h3>
-              <p>Git, Agile, Scrum, JIRA, Figma, Postman, Testing</p>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </div>
   );

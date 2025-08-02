@@ -5,6 +5,33 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: "AMAVA: Adaptive Motion-Aware Video-to-Audio Framework",
+      description: "First publication coming soon: 'Semantically consistent Video-to-Audio Generation using Multimodal Language Large Model'. Novel framework that automatically generates audio semantically consistent with video content. Harnesses multimodal large language model (MLLM) to understand video semantics and generate creative audio schemes. Results in video-to-audio generation with natural language as interface. In collaboration with AI-LAMP, San Francisco.",
+      image: "https://via.placeholder.com/400x250/3498db/ffffff?text=AMAVA+Research",
+      technologies: ["Python", "Multimodal LLM", "Video-to-Audio", "Semantic Generation", "AI-LAMP", "Publication"],
+      github: "#",
+      live: "#",
+      featured: true
+    },
+    {
+      title: "Diff-Foley: Synchronized Video-to-Audio Synthesis",
+      description: "Currently working on diffusion foley replication and improvement. State-of-the-art V2A method using latent diffusion model (LDM) with contrastive audio-visual pretraining (CAVP). Generates high-quality audio with improved synchronization and audio-visual relevance. Achieves SOTA performance on large-scale V2A datasets with practical applicability and generalization capabilities.",
+      image: "https://via.placeholder.com/400x250/3498db/ffffff?text=Diff-Foley+Research",
+      technologies: ["Python", "Latent Diffusion Models", "CAVP", "Cross-Attention", "Spectrogram", "V2A Synthesis"],
+      github: "#",
+      live: "#",
+      featured: true
+    },
+    {
+      title: "SVA V2A (Visual-to-Audio Research)",
+      description: "Currently developing a novel pipeline to convert visual input into meaningful soundscapes for individuals with visual impairments. Built and labeled a custom video dataset using public surveillance and street activity clips. Applied classifier models to detect actions like walking, crossing, and traffic scenarios. Integrated SVA (Support Vector Analysis) for robust multimodal training. In collaboration with AI-LAMP, San Francisco.",
+      image: "https://via.placeholder.com/400x250/3498db/ffffff?text=SVA+V2A+Research",
+      technologies: ["Python", "Deep Learning", "Computer Vision", "Audio Synthesis", "Accessibility", "AI-LAMP"],
+      github: "#",
+      live: "#",
+      featured: true
+    },
+    {
       title: "Control of DC Motor & Inverted Pendulum System",
       description: "Designed full Simulink simulation with state feedback control and observer. Modeled system dynamics, optimized gain tuning. Reduced motor settling time by 0.1s, improved angular precision by 10%.",
       image: "https://via.placeholder.com/400x250/3498db/ffffff?text=DC+Motor+Control",
@@ -78,8 +105,17 @@ const Projects = () => {
     }
   ];
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const mlProjects = projects.filter(project => 
+    project.technologies.some(tech => 
+      ['Python', 'Deep Learning', 'Machine Learning', 'Neural Networks', 'Multimodal LLM', 'Video-to-Audio', 'Latent Diffusion Models', 'CAVP', 'Scikit-learn', 'NumPy', 'Computer Vision', 'Audio Synthesis'].includes(tech)
+    )
+  );
+  
+  const engineeringProjects = projects.filter(project => 
+    project.technologies.some(tech => 
+      ['MATLAB', 'Simulink', 'Control Systems', 'Signal Processing', 'FFT', 'Power Systems', 'Communication Systems', 'QPSK', 'Newton-Raphson', '3D Modeling', 'Rapid Prototyping'].includes(tech)
+    )
+  );
 
   return (
     <div className="projects">
@@ -103,22 +139,22 @@ const Projects = () => {
           machine learning, control systems, and embedded systems development.
         </motion.p>
 
-        {featuredProjects.length > 0 && (
+        {mlProjects.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="featured-projects"
+            className="ml-projects"
           >
-            <h2>Featured Projects</h2>
-            <div className="featured-grid">
-              {featuredProjects.map((project, index) => (
+            <h2>Machine Learning & AI Projects</h2>
+            <div className="projects-grid">
+              {mlProjects.map((project, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
-                  className="project-card featured"
+                  className="project-card"
                 >
                   <div className="project-image">
                     <img src={project.image} alt={project.title} />
@@ -134,9 +170,11 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                    <div className="featured-badge">
-                      <FaStar />
-                    </div>
+                    {project.featured && (
+                      <div className="featured-badge">
+                        <FaStar />
+                      </div>
+                    )}
                   </div>
                   <div className="project-content">
                     <h3>{project.title}</h3>
@@ -153,50 +191,57 @@ const Projects = () => {
           </motion.div>
         )}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="other-projects"
-        >
-          <h2>Other Projects</h2>
-          <div className="projects-grid">
-            {otherProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                className="project-card"
-              >
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                      </a>
-                      {project.live !== "#" && (
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
-                          <FaExternalLinkAlt />
+        {engineeringProjects.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="engineering-projects"
+          >
+            <h2>Engineering & Control Systems Projects</h2>
+            <div className="projects-grid">
+              {engineeringProjects.map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+                  className="project-card"
+                >
+                  <div className="project-image">
+                    <img src={project.image} alt={project.title} />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <FaGithub />
                         </a>
-                      )}
+                        {project.live !== "#" && (
+                          <a href={project.live} target="_blank" rel="noopener noreferrer">
+                            <FaExternalLinkAlt />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                    {project.featured && (
+                      <div className="featured-badge">
+                        <FaStar />
+                      </div>
+                    )}
+                  </div>
+                  <div className="project-content">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <div className="project-technologies">
+                      {project.technologies.map((tech, idx) => (
+                        <span key={idx} className="tech-tag">{tech}</span>
+                      ))}
                     </div>
                   </div>
-                </div>
-                <div className="project-content">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </div>
   );
